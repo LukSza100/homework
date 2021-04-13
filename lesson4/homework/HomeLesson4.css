@@ -1,0 +1,234 @@
+body {
+  margin: 0;
+}
+
+div {
+  font-family: system-ui;
+}
+
+.navi {
+  background-color: darksalmon;
+  display: inline-block;
+  color: white;
+  height: 30px;
+  width: 100%;
+  font-size: 15px;
+  padding-top: 10px;
+}
+
+.my {
+  display: inline;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.about {
+  display: inline;
+  margin-left: 77%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.form {
+  display: inline;
+  cursor: pointer;
+}
+
+.my:hover {
+  background-color: lightgrey;
+}
+
+.heading {
+  background-image: url(https://www.incimages.com/uploaded_files/image/1920x1080/getty_548298907_9706479704500126_78156.jpg);
+  width: auto;
+  height: 395px;
+}
+
+.devstock {
+  position: absolute;
+  margin-left: 40px;
+  margin-top: 50px;
+  font-size: 35px;
+  color: darksalmon;
+  border-right: 1px solid;
+  font-weight: 600;
+}
+
+.lesson4 {
+  font-size: 23px;
+  margin-top: 30px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.content {
+  background-color: white;
+}
+
+.pss {
+  color: lightslategray;
+  text-align: center;
+  font-size: 18px;
+}
+
+.lorem {
+  text-align: center;
+  font-size: 15px;
+}
+
+.article1 {
+  display: inline-block;
+  font-family: initial;
+  font-size: 19px;
+  text-align: center;
+  background-color: linen;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 30px 10px 30px 170px;
+  height: 87px;
+  width: 320px;
+  transition-duration: 0.5s;
+  transition-property: all;
+  font-weight: 900;
+}
+
+.article1:hover {
+  transform: scale(1.1);
+  outline: 2px solid lightgray;
+  cursor: pointer;
+  background-color: darksalmon;
+}
+
+.lorem2 {
+  font-size: 10px;
+}
+
+.article2 {
+  display: inline-block;
+  font-family: initial;
+  font-size: 19px;
+  text-align: center;
+  background-color: linen;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 30px 10px 30px 40px;
+  height: 87px;
+  width: 320px;
+  transition-duration: 0.5s;
+  transition-property: all;
+  font-weight: 900;
+}
+
+.article2:hover {
+  transform: scale(1.1);
+  outline: 2px solid lightgray;
+  cursor: pointer;
+  background-color: darksalmon;
+}
+
+.lorem3 {
+  font-size: 10px;
+}
+
+.article3 {
+  display: inline-block;
+  font-family: initial;
+  font-size: 19px;
+  text-align: center;
+  background-color: linen;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 30px 10px 30px 40px;
+  height: 87px;
+  width: 320px;
+  transition-duration: 0.5s;
+  transition-property: all;
+  font-weight: 900;
+}
+
+.article3:hover {
+  transform: scale(1.1);
+  outline: 2px solid lightgray;
+  cursor: pointer;
+  background-color: darksalmon;
+}
+
+.lorem4 {
+  font-size: 10px;
+}
+
+.footer {
+  display: inline-block;
+  background-color: darksalmon;
+  margin-top: 20px;
+  width: 100%;
+  height: 350px;
+}
+
+.footer2 {
+  display: inline-block;
+  padding-left: 1%;
+}
+
+.my2 {
+  width: 425px;
+  font-size: 14px;
+  padding-right: 30px;
+}
+
+.LoremMy {
+  width: 425px;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.footer3 {
+  display: inline-block;
+  background-color: darksalmon;
+  vertical-align: bottom;
+}
+
+img {
+  display: inline-block;
+  height: 180px;
+  width: 170px;
+  padding-left: 180px;
+}
+
+.login {
+  display: inline-block;
+  margin-left: 210px;
+  vertical-align: top;
+}
+
+.name {
+  font-size: 12px;
+}
+
+.password {
+  font-size: 12px;
+}
+
+.remember {
+  font-size: 12px;
+}
+
+.but {
+  font-size: 6px;
+  background-color: black;
+  font-size: 8px;
+  color: white;
+  padding-top: 8px;
+  padding-bottom: 5px;
+  text-align: center;
+  width: 70px;
+  height: 15px;
+  font-weight: 900;
+}
+
+input[type="text"] {
+  padding: 7px 10px;
+}
