@@ -269,7 +269,7 @@ const osoba = {
   lastName: "Nowak",
   age: 33,
   czyLubiCzytacKsiążke: true,
-  maTV: true,
+  maTV: false,
 };
 
 const książka = {
@@ -279,13 +279,12 @@ const książka = {
 };
 
 function readBook(person, book) {
-  if (osoba.czyLubiCzytacKsiążke == true) {
+  if (osoba.czyLubiCzytacKsiążke == false && osoba.maTV == true) {
+    return "Idź oglądać TV";
+  } else if (osoba.czyLubiCzytacKsiążke == true && osoba.maTV == false)
     return `Cześć ${osoba.surnNme} ${osoba.lastName}, polecam Ci przeczytać książkę
     ${książka.title}, ma tylko ${książka.numberOfPages} stron`;
-  } else if (osoba.czyLubiCzytacKsiążke == false && osoba.maTV == true) {
-    ("Idź oglądać TV");
-  } else osoba.czyLubiCzytacKsiążke == false && osoba.maTV == false;
+  else osoba.czyLubiCzytacKsiążke == false && osoba.maTV == false;
   return "Nie wiem co Ci zaproponować";
 }
-// console.log(readBook());
-//  Nie mogę uruchomić środkowego wariantu i nie moge znaleźć przyczzny.
+console.log(readBook());
