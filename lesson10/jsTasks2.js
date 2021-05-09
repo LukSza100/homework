@@ -52,17 +52,17 @@ function aboutAla(name2, age, numberOfChildren) {
 // a) zwracającą przekazaną do parametru tablicę
 
 const parking = ["Porsche", "Fiat", "Scania", "Toyota"];
-function returnParking() {
-  return parking;
+function returnParking(array) {
+  return array;
 }
 // console.log(returnParking(parking));
 
 //   b) zwracającą drugą wartość przekazanej do funkcji tablicy 3 elementowej,
 const colour = ["red", "green", "blue"];
-function showColour() {
-  return colour[1];
+function showColour(array) {
+  return array[1];
 }
-// console.log(showColour());
+// console.log(showColour(colour));
 
 // c) zwracającą stringa 'Przekazana tablica ma x elementów, a elementem nr 3 jest x'
 const fruicts = ["apple", "orange", "blueberry", "banana"];
@@ -91,9 +91,9 @@ let vip = {
 };
 
 function showName(blabla) {
-  return vip.surName;
+  return blabla.surName;
 }
-// console.log(showName());
+// console.log(showName(vip));
 
 //  f) zwracającą stringa 'imię(tu zmienna) i nazwisko(tu zmienna) ma x(tu zmienna) lat
 //   i x(tu zmienna) cm wzrostu'
@@ -105,10 +105,10 @@ let piłkarz = {
   wzrost: 151,
 };
 
-function footballStar() {
-  return `${piłkarz.imie} ${piłkarz.nazwisko} ma ${piłkarz.wiek} lat i ${piłkarz.wzrost} cm wzrostu`;
+function footballStar(abcd) {
+  return `${abcd.imie} ${abcd.nazwisko} ma ${abcd.wiek} lat i ${abcd.wzrost} cm wzrostu`;
 }
-// console.log(footballStar());
+// console.log(footballStar(piłkarz));
 
 //  g) przyjmującą dwa parametry gdzie jeden to obiekt, a drugi to wiek.
 //   Funkcja powinna zwracać wiek z obiektu ale zmieniony na ten z naszego drugiego parametru,
@@ -120,12 +120,10 @@ let siatkarz = {
 };
 
 function volleyballStar(howOld) {
-  siatkarz.ageObj = 35;
+  siatkarz.ageObj = howOld;
   return siatkarz.ageObj;
 }
-// console.log(volleyballStar());
-
-// Tutaj powyzej coś niby wyszło ale wiecej przypadku niż swiadomego działania.
+console.log(volleyballStar(35));
 
 // -----------------------------------------------------------------------------------
 
@@ -136,10 +134,16 @@ function volleyballStar(howOld) {
 //   18stu lat i nie ma prawka to też ma wyświetlić, ze 'Nie ma prawa jazdy'. A jak
 //   ma powyżej 18stu lat i prawo jazdy to niech wyświetli, że "Możesz śmiało jeździć"
 
-function canDrive(age) {
-  return age < 18 ? "Nie ma prawa jazdy" : "Możesz śmiało jeździć";
+function drivingLicenseAge(age, license) {
+  if (age > 18 && license == true) {
+    return `Może jeździć`;
+  } else if (age > 18 && license == false) {
+    return `Nie ma prawa jazdy (ale może zrobić :))`;
+  } else {
+    return `Nie ma prawa jazdy (jest za młody/a)`;
+  }
 }
-// console.log(canDrive(19));
+// console.log(drivingLicenseAge(19, false));
 
 //   b) przyjmuje jako parametr string, jeśli string jest równy 'Kup', niech wyświetli
 //   'Widzę, że zrobić zakupy', a jak string jest równy 'Sprzedaj' niech wyświetli
@@ -165,10 +169,10 @@ function value(x) {
     return "Liczba jest dodatnia";
   } else if (x < 0) {
     return "Liczba jest ujemna";
-  } else x == 0;
+  } else;
   return "Liczba jest równa 0";
 }
-// console.log(value(-3));
+console.log(value(2));
 
 //    d) przyjmującą liczbę jako argument i jeśli liczba jest podzielna przez 3 to niech
 //    pokaże 'Fizz', jak podzielna jest przez 5 to 'Buzz', a jak przez 3 i 5 to 'FizzBuzz',
@@ -176,10 +180,10 @@ function value(x) {
 function division(y) {
   if (y % 3 == 0 && y % 5 == 0) {
     return "FizzBuzz";
-  } else if (y % 3 == 0) {
-    return "Fizz";
-  } else y % 5 == 0;
-  return "Buzz";
+  } else if (y % 5 == 0) {
+    return "Buzzz";
+  } else;
+  return "Fizz";
 }
 // console.log(division(15));
 // console.log(division(10));
@@ -191,11 +195,11 @@ function division(y) {
 //    oglądać, a jak ma poniżej i nie ma zgody to nie może, wyświetli odpowiednie komunikaty,
 
 function film(age, agree) {
-  if (age > 15) {
+  if (age > 15 && agree == "yes") {
     return "Możesz oglądać film";
   } else if (age < 15 && agree == "yes") {
     return "Za zgodą rodziców możesz oglądać film";
-  } else age < 15 && agree == "no";
+  } else;
   return "Nie możesz oglądać filmu";
 }
 // console.log(film(12, "yes"));
@@ -281,10 +285,10 @@ const książka = {
 function readBook(person, book) {
   if (osoba.czyLubiCzytacKsiążke == false && osoba.maTV == true) {
     return "Idź oglądać TV";
-  } else if (osoba.czyLubiCzytacKsiążke == true && osoba.maTV == false)
+  } else if (osoba.czyLubiCzytacKsiążke == true && osoba.maTV == false) {
     return `Cześć ${osoba.surnNme} ${osoba.lastName}, polecam Ci przeczytać książkę
     ${książka.title}, ma tylko ${książka.numberOfPages} stron`;
-  else osoba.czyLubiCzytacKsiążke == false && osoba.maTV == false;
+  } else;
   return "Nie wiem co Ci zaproponować";
 }
-console.log(readBook());
+// console.log(readBook());
