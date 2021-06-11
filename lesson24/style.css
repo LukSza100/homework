@@ -1,0 +1,15 @@
+#heading {
+  display: flex;
+  justify-content: center;
+  color: steelblue;
+}
+
+#info {
+  display: flex;
+  justify-content: center;
+}
+
+#numberAllCharacters {
+  display: flex;
+  margin-left: 10px;
+}
